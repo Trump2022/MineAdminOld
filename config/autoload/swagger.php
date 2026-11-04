@@ -13,7 +13,7 @@ use Symfony\Component\Finder\Finder;
 
 return [
     'enable' => true,
-    'port' => 9503,
+    'port' => (int) env('SWAGGER_PORT', 9503),
     'json_dir' => BASE_PATH . '/storage/swagger',
     'html' => file_get_contents(BASE_PATH . '/storage/swagger/index.html'),
     'url' => '/swagger',
